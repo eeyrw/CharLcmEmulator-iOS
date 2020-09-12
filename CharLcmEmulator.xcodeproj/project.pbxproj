@@ -15,6 +15,7 @@
 		0DCFB7AC250CA32000D1916F /* CharLcmEmulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCFB7AB250CA32000D1916F /* CharLcmEmulatorTests.swift */; };
 		0DCFB7B7250CA32000D1916F /* CharLcmEmulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCFB7B6250CA32000D1916F /* CharLcmEmulatorUITests.swift */; };
 		0DCFB7C5250CA41000D1916F /* CharLcmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCFB7C4250CA41000D1916F /* CharLcmView.swift */; };
+		0DCFB7C7250CADB300D1916F /* FontGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCFB7C6250CADB300D1916F /* FontGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0DCFB7B6250CA32000D1916F /* CharLcmEmulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharLcmEmulatorUITests.swift; sourceTree = "<group>"; };
 		0DCFB7B8250CA32000D1916F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DCFB7C4250CA41000D1916F /* CharLcmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharLcmView.swift; sourceTree = "<group>"; };
+		0DCFB7C6250CADB300D1916F /* FontGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				0DCFB796250CA31E00D1916F /* AppDelegate.swift */,
 				0DCFB7C4250CA41000D1916F /* CharLcmView.swift */,
+				0DCFB7C6250CADB300D1916F /* FontGenerator.swift */,
 				0DCFB798250CA31E00D1916F /* ViewController.swift */,
 				0DCFB79A250CA31E00D1916F /* Main.storyboard */,
 				0DCFB79D250CA32000D1916F /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DCFB7C7250CADB300D1916F /* FontGenerator.swift in Sources */,
 				0DCFB7C5250CA41000D1916F /* CharLcmView.swift in Sources */,
 				0DCFB799250CA31E00D1916F /* ViewController.swift in Sources */,
 				0DCFB797250CA31E00D1916F /* AppDelegate.swift in Sources */,

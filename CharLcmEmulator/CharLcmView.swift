@@ -107,6 +107,17 @@ class CharLcmView: UIView {
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override open func draw(_ rect: CGRect) {
+        let currentWidth = rect.width
+        let currentHeight = rect.height
+        
+        if((Int(currentWidth) != self.mSurfaceWidth) || (Int(currentHeight) != self.mSurfaceHeight))
+        {
+            mSurfaceWidth = Int(currentWidth)
+            mSurfaceHeight = Int(currentHeight)
+            reGenResoures()
+            
+        }
+        
         let con = UIGraphicsGetCurrentContext()
         con?.setFillColor(mLcdPanelColor)
         con?.fill(rect)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="landscape">
+    <device id="retina3_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,17 +15,15 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CharLcmEmulator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aoa-DZ-Fpg" customClass="CharLcmView" customModule="CharLcmEmulator" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="262"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aoa-DZ-Fpg" customClass="CharLcmView" customModule="CharLcmEmulator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="274"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGe-oQ-LDX">
-                                <rect key="frame" x="40" y="270" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGe-oQ-LDX">
+                                <rect key="frame" x="16" y="282" width="34" height="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="btnTd:" destination="BYZ-38-t0r" eventType="touchDown" id="F4h-gk-qVF"/>
@@ -33,6 +31,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aoa-DZ-Fpg" secondAttribute="trailing" id="Ckw-pb-meP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uGe-oQ-LDX" secondAttribute="bottom" constant="8" id="TI2-rH-TYF"/>
+                            <constraint firstItem="uGe-oQ-LDX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cbw-9D-TDQ"/>
+                            <constraint firstItem="aoa-DZ-Fpg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hvt-5n-D4E"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uGe-oQ-LDX" secondAttribute="trailing" constant="20" symbolic="YES" id="nvC-gb-Aqg"/>
+                            <constraint firstItem="aoa-DZ-Fpg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pHW-rr-qR0"/>
+                            <constraint firstItem="uGe-oQ-LDX" firstAttribute="top" secondItem="aoa-DZ-Fpg" secondAttribute="bottom" constant="8" id="zOn-xy-ake"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -41,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114.08450704225352" y="108.75"/>
+            <point key="canvasLocation" x="112.5" y="106.875"/>
         </scene>
     </scenes>
 </document>

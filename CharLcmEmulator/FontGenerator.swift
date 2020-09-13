@@ -282,13 +282,9 @@ class FontGenerator {
     func genCustomFontBitmap(allRawData:[UInt8],unitWidth:Double,unitHeight:Double) {
         
         let fontNum = 8;
-        
-        var mFontBitmapCustom = [CGImage]()
         var temp = [UInt8](repeating: 0, count: fontNum)
 
-        
         for fontIndex in 0..<fontNum{
-            
             temp[0..<temp.count]=allRawData[fontIndex*8..<fontIndex*8+temp.count]
             mFontBitmapCustom.append(genSingleCustomFontBitmap(raw: temp,
                                                                      unitWidth: unitWidth, unitHeight: unitHeight))
@@ -314,6 +310,13 @@ class FontGenerator {
     
     func getActualCursorWithXY(x:Int,y:Int)->CGPoint{
         return getActualCursor(cursor: CGPoint(x: x, y: y))
+    }
+    
+    func getActualRectWithXY(x:Int,y:Int)->CGRect{
+        let cr = getActualCursor(cursor: CGPoint(x: x, y: y))
+        let bp = mFontBitmapMain[0]
+        let charRect = CGRect(x: cr.x, y: cr.y, width: CGFloat(bp.width)/UIScreen.main.scale, height: CGFloat(bp.height)/UIScreen.main.scale)
+        return charRect
     }
     
     func getCharBitmap(char:CChar)->CGImage {

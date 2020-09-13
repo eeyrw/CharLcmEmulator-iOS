@@ -70,6 +70,10 @@ class CharLcmView: UIView {
         forceReDraw();
     }
     
+    func writeChar(char:CChar)  {
+        mLcmChars![mCursorX + mCursorY * mColNum]=char
+    }
+    
     func setCustomFont(_ index:Int, _ rawdata:[UInt8]) {
         
         mCustomCharsRaw![index*8..<index*8+rawdata.count]=rawdata[0..<rawdata.count]
@@ -126,11 +130,8 @@ class CharLcmView: UIView {
 
             for y in 0..<mRowNum {
                 for x in 0..<mColNum {
-                    
                     let bp = mFontGen!.getCharBitmap(char:mLcmChars![dy + x])
-                    let cr = mFontGen!.getActualCursorWithXY(x: x, y: y)
-                    let charRect = CGRect(x: cr.x, y: cr.y, width: CGFloat(bp.width)/UIScreen.main.scale, height: CGFloat(bp.height)/UIScreen.main.scale)
-                    con?.draw(bp, in: charRect)
+                    con?.draw(bp, in: mFontGen!.getActualRectWithXY(x: x, y: y))
                 }
                 dy += mColNum
         }
